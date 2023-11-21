@@ -38,7 +38,7 @@ public class TarefaController : ControllerBase
         {
             List<Tarefa> tarefas = _context.Tarefas
                                            .Include(x => x.Categoria)
-                                           .Where(x => x.Status == "Não iniciada")
+                                           .Where(x => x.Status == "Não iniciada" || x.Status == "Em andamento")
                                            .ToList();
             return Ok(tarefas);
         }

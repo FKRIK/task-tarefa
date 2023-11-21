@@ -3,11 +3,11 @@ import { Component } from '@angular/core';
 import { Tarefa } from 'src/app/models/tarefa.model';
 
 @Component({
-  selector: 'app-tarefa-listar-concluidas',
-  templateUrl: './tarefa-listar-concluidas.component.html',
-  styleUrls: ['./tarefa-listar-concluidas.component.css']
+  selector: 'app-tarefa-listar-naoconcluidas',
+  templateUrl: './tarefa-listar-naoconcluidas.component.html',
+  styleUrls: ['./tarefa-listar-naoconcluidas.component.css']
 })
-export class TarefaListarConcluidasComponent {
+export class TarefaListarNaoconcluidasComponent {
   tarefas!: Tarefa[]
 
   constructor(private client: HttpClient){ }
@@ -15,7 +15,7 @@ export class TarefaListarConcluidasComponent {
   ngOnInit() : void{
     // console.log("O componente foi carregado!");
 
-    this.client.get<Tarefa[]>("https://localhost:7015/api/tarefa/concluidas")
+    this.client.get<Tarefa[]>("https://localhost:7015/api/tarefa/naoconcluidas")
       .subscribe({
         //Requisição com sucesso
         next: (data) => {

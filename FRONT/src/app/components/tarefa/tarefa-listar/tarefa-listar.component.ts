@@ -12,7 +12,7 @@ export class TarefaListarComponent {
 
   tarefa!: Tarefa;
   status: string = "";
-  id!: number;
+  id: number = 0;
 
   constructor(private client: HttpClient){ }
 
@@ -33,20 +33,20 @@ export class TarefaListarComponent {
       })
   }
 
-  alterar(): void{
-    // this.tarefa.status = this.status;
+  alterar(): void {
+    
 
     // this.client
-    //   .patch<Tarefa>(`https://localhost:7015/api/tarefa/alterar/${this.id}`, this.tarefa.status = this.status)
+    //   .patch<Tarefa>(`https://localhost:7015/api/tarefa/alterar/${this.id}`, { status: this.tarefa.status })
     //   .subscribe({
-    //     //Requisição com sucesso
+    //     // Requisição com sucesso
     //     next: (data) => {
     //       console.log(data);
-    //     }, 
-    //     //Requisição com erro
+    //     },
+    //     // Requisição com erro
     //     error: (error) => {
     //       console.log(error);
     //     }
-    //   })
+    //   });
   }
 }

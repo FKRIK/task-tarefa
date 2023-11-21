@@ -8,13 +8,15 @@ import { TarefaListarComponent } from './components/tarefa/tarefa-listar/tarefa-
 import { TarefaCadastrarComponent } from './components/tarefa/tarefa-cadastrar/tarefa-cadastrar.component';
 import { FormsModule } from '@angular/forms';
 import { TarefaListarConcluidasComponent } from './components/tarefa/tarefa-listar-concluidas/tarefa-listar-concluidas.component';
+import { TarefaListarNaoconcluidasComponent } from './components/tarefa/tarefa-listar-naoconcluidas/tarefa-listar-naoconcluidas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TarefaListarComponent,
     TarefaCadastrarComponent,
-    TarefaListarConcluidasComponent
+    TarefaListarConcluidasComponent,
+    TarefaListarNaoconcluidasComponent
   ],
   imports: [
     BrowserModule,
