@@ -1,0 +1,18 @@
+<h2>Cadastro de tarefas</h2>
+
+<div>
+    <label for="">Tarefa</label>
+    <input type="text" [(ngModel)]="titulo">
+
+    <label for="">Descrição</label>
+    <input type="text" [(ngModel)]="descricao">
+
+    <label for="">Categoria</label>
+    <select [(ngModel)]="categoriaId">
+        <option *ngFor="let cat of categorias" value="{{ cat.categoriaId }}">
+            {{ cat.nome }}
+        </option>
+    </select>
+
+    <button (click)="cadastrar()">Salvar</button>
+</div>
